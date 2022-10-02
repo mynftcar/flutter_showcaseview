@@ -99,7 +99,11 @@ class GetPosition {
   }
 
   double getWidth() {
-    return getRight() - getLeft();
+    double width = getRight() - getLeft();
+    if (width > 500) {
+      width = 500;
+    }
+    return width;
   }
 
   double getCenter() {
